@@ -49,8 +49,29 @@ public class PersonService {
             System.out.println(person.getName());
             System.out.println(person.getFamily());
         }
-
-
+    }
+    public static void findAllByJPQLWithParametersAndNamedQuery(){
+        EntityManager entityManager = JPA.getEntityManager();
+        Query query = entityManager.createNamedQuery("x1");
+        query.setParameter("firstName" , "Ali");
+        query.setParameter("lastName" , "Bahador");
+        List<Person> list = query.getResultList();
+        entityManager.close();
+        for(Person person : list){
+            System.out.println(person.getId());
+            System.out.println(person.getName());
+            System.out.println(person.getFamily());
+        }
+    }
+    public static void findALLBYSQL(){
+        EntityManager entityManager = JPA.getEntityManager();
+        Query query = entityManager.createNativeQuery("select  * from PERSON" , Person.class);
+        List<Person> list = query.getResultList();
+        entityManager.close();
+        for(Person person : list){
+            System.out.println(person.getId());
+            System.out.println(person.getName());
+        }
     }
     public static void main(String[] args) {
         findAllByJPQL();
