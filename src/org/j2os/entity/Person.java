@@ -4,6 +4,10 @@ import javax.persistence.*;
 
 @Entity(name = "person")
 @Table(name = "person")
+@NamedQueries({
+        @NamedQuery(name = "x1",query = "select entity from person entity where entity.name=:firstName or entity.family=:lastName"),
+        @NamedQuery(name = "x2",query = "select entity from person  entity"),
+})
 public class Person {
     @Id
     @GeneratedValue(strategy =  GenerationType.AUTO)

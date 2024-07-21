@@ -7,11 +7,11 @@
         <properties>
             <property name="hibernate.connection.driver_class" value="oracle.jdbc.driver.OracleDriver"/>
             <property name="hibernate.connection.url" value="jdbc:oracle:thin:@localhost:1521/xepdb1"/>
-            <property name="hibernate.connection.username" value="amirsam"/>
+            <property name="hibernate.connection.username" value="mahdi"/>
             <property name="hibernate.connection.password" value="myjava123"/>
             <property name="hibernate.dialect" value="org.hibernate.dialect.Oracle12cDialect"/>
             <property name="hibernate.show_sql" value="true"/>
-            <!--<property name="hibernate.hbm2ddl.auto" value="create-drop"/>-->
+<!--            <property name="hibernate.hbm2ddl.auto" value="create-drop"/>-->
         </properties>
     </persistence-unit>
 </persistence>
