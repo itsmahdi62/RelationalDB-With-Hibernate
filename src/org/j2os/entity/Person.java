@@ -13,7 +13,8 @@ public class Person {
     @GeneratedValue(strategy =  GenerationType.AUTO)
     private long id ;
     private String name,family;
-
+    @OneToOne(cascade = CascadeType.ALL)
+    private Car car;
     public long getId() {
         return id;
     }
@@ -38,6 +39,15 @@ public class Person {
 
     public Person setFamily(String family) {
         this.family = family;
+        return this;
+    }
+
+    public Car getCar() {
+        return car;
+    }
+
+    public Person setCar(Car car) {
+        this.car = car;
         return this;
     }
 }

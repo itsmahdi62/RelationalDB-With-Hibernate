@@ -5,6 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c319aa4e-1042-42f1-87c1-ead9f785c504" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/org/j2os/entity/Car.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/META-INF/persistence.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/j2os/entity/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/j2os/entity/Person.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/org/j2os/service/PersonService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/j2os/service/PersonService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -83,7 +87,9 @@
       <updated>1721484578630</updated>
       <workItem from="1721484579493" duration="3670000" />
       <workItem from="1721503686098" duration="3626000" />
-      <workItem from="1721553965698" duration="2771000" />
+      <workItem from="1721553965698" duration="6832000" />
+      <workItem from="1721588871302" duration="648000" />
+      <workItem from="1721664528290" duration="898000" />
     </task>
     <servers />
   </component>

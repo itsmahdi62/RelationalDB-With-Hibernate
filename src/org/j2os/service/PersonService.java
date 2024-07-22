@@ -1,6 +1,7 @@
 package org.j2os.service;
 
 import org.j2os.common.JPA;
+import org.j2os.entity.Car;
 import org.j2os.entity.Person;
 
 import javax.persistence.EntityManager;
@@ -73,7 +74,23 @@ public class PersonService {
             System.out.println(person.getName());
         }
     }
+
+    public static void save1(){
+        EntityManager entityManager = JPA.getEntityManager();
+        EntityTransaction entityTransaction = entityManager.getTransaction();
+        entityTransaction.begin();
+        Person person1 = new Person().setName("Ali").setFamily("Ghaderi");
+        Car car1 = new Car().setModel("bmw");
+        person1.setCar(car1);
+
+        entityManager.persist(person1);
+        entityTransaction.commit();
+        entityManager.close();
+
+        System.out.println(person1.getName());
+        System.out.println(person1.getCar());
+    }
     public static void main(String[] args) {
-        findAllByJPQL();
+        save1();
     }
 }
