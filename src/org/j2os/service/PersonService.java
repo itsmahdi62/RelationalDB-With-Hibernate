@@ -72,6 +72,8 @@ public class PersonService {
         for(Person person : list){
             System.out.println(person.getId());
             System.out.println(person.getName());
+            System.out.println(person.getCar().getModel());
+
         }
     }
 
@@ -90,7 +92,22 @@ public class PersonService {
         System.out.println(person1.getName());
         System.out.println(person1.getCar());
     }
+    public  static void find1(){
+        EntityManager entityManager = JPA.getEntityManager();
+//        Query query = entityManager.createQuery("select o from person o");
+        Query query = entityManager.createNativeQuery("select  * from PERSON" , Person.class);
+        List<Person> list  = query.getResultList();
+        entityManager.close();
+        for (Person person : list){
+            System.out.println(person.getId());
+            System.out.println(person.getName());
+            System.out.println(person.getFamily());
+            System.out.println(person.getCar().getId());
+            System.out.println(person.getCar().getModel());
+            System.out.println("********************************************");
+        }
+    }
     public static void main(String[] args) {
-        save1();
+        find1();
     }
 }
